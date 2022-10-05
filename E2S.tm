@@ -3,6 +3,16 @@
 <style|<tuple|course|french>>
 
 <\body>
+  <\hide-preamble>
+    <assign|paragraph-toc|<macro|>>
+
+    <assign|table-of-contents-text|<macro|<localize|Table of contents>>>
+
+    <assign|table-of-contents|<\macro|aux|body>
+      <render-table-of-contents|<table-of-contents-text>|<arg|body>>
+    </macro>>
+  </hide-preamble>
+
   <doc-data|<doc-title|Les bases de la programmation sous
   <name|Python>>|<doc-author|<author-data|<author-name|eric.herbert@u-paris.fr>|<\author-affiliation>
     Université Paris Cité
@@ -10,7 +20,12 @@
 
   <abstract-data|<abstract|Ce cours a pour but de vous permettre de produire,
   extraire et exploiter des données <with|font-shape|italic|via> le language
-  <name|Python>.>>
+  <name|Python>. C'est un cours d'introduction permettant une prise en main
+  autonome dans l'apprentissage des notions qui vous seront utiles. Les
+  ressources sur internet et dans les bibliothèques sont pléthoriques, que ce
+  soit pour des questions précises, des tutoriaux ou des cours complets.>>
+
+  <hrule>
 
   <\table-of-contents|toc>
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|1<space|2spc>Découverte
@@ -37,37 +52,39 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-6>>
 
-    <with|par-left|4tab|Rêgles d'écriture
+    <with|par-left|2tab|1.5.1<space|2spc>Rêgles d'écriture
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-7><vspace|0.15fn>>
+    <no-break><pageref|auto-7>>
 
-    <with|par-left|4tab|String (chaine de caractères)
+    <with|par-left|2tab|1.5.2<space|2spc>String (chaine de caractères)
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-8><vspace|0.15fn>>
+    <no-break><pageref|auto-8>>
 
-    <with|par-left|4tab|Interactions avec les listes
+    <with|par-left|2tab|1.5.3<space|2spc>Interaction avec les listes
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-9><vspace|0.15fn>>
+    <no-break><pageref|auto-9>>
 
-    <with|par-left|4tab|Librairies <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-10><vspace|0.15fn>>
-
-    <with|par-left|4tab|Extraire une fraction d'un tableau, liste vecteur
+    <with|par-left|2tab|1.5.4<space|2spc>Librairies
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-11><vspace|0.15fn>>
+    <no-break><pageref|auto-10>>
 
-    <with|par-left|4tab|Fonctions personnalisées
+    <with|par-left|2tab|1.5.5<space|2spc>Extraire une fraction d'un tableau,
+    d'une liste ou d'un vecteur <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-11>>
+
+    <with|par-left|2tab|1.5.6<space|2spc>Débugage
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-12><vspace|0.15fn>>
+    <no-break><pageref|auto-12>>
 
-    <with|par-left|4tab|Débugage <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-13><vspace|0.15fn>>
+    <with|par-left|1tab|1.6<space|2spc>Fonctions personnalisées
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-13>>
 
-    <vspace*|1fn><with|font-series|bold|math-font-series|bold|2<space|2spc>Exporter
-    / Importer un fichier> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|2<space|2spc>Importer
+    et Exporter un fichier> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-14><vspace|0.5fn>
 
-    <with|par-left|1tab|2.1<space|2spc>Avec
+    <with|par-left|1tab|2.1<space|2spc>Avec la librairie
     <with|mode|prog|prog-language|python|font-family|rm|numpy>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-15>>
@@ -80,118 +97,91 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-17>>
 
-    <with|par-left|4tab|Exercice <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-18><vspace|0.15fn>>
-
     <with|par-left|2tab|2.2.2<space|2spc>Fichiers Excel
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-19>>
-
-    <with|par-left|4tab|Exercice <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-20><vspace|0.15fn>>
-
-    <with|par-left|4tab|Exercice d'application
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-21><vspace|0.15fn>>
+    <no-break><pageref|auto-18>>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|3<space|2spc>Faire
     une figure> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-22><vspace|0.5fn>
+    <no-break><pageref|auto-19><vspace|0.5fn>
 
     <with|par-left|1tab|3.1<space|2spc>Introduction
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-23>>
+    <no-break><pageref|auto-20>>
 
     <with|par-left|1tab|3.2<space|2spc>Plus sophistiqué
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-24>>
+    <no-break><pageref|auto-21>>
 
     <with|par-left|2tab|3.2.1<space|2spc>Plot multiples
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-25>>
-
-    <with|par-left|4tab|Exercice <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-26><vspace|0.15fn>>
+    <no-break><pageref|auto-22>>
 
     <with|par-left|2tab|3.2.2<space|2spc>Histogrammes
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-27>>
-
-    <with|par-left|4tab|Exercice <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-28><vspace|0.15fn>>
+    <no-break><pageref|auto-23>>
 
     <with|par-left|2tab|3.2.3<space|2spc>Matrices
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-29>>
-
-    <with|par-left|4tab|Exercice <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-30><vspace|0.15fn>>
+    <no-break><pageref|auto-24>>
 
     <with|par-left|2tab|3.2.4<space|2spc>Affichage / Enregistrement
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-31>>
+    <no-break><pageref|auto-25>>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|4<space|2spc>Les
     fonctions> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-32><vspace|0.5fn>
+    <no-break><pageref|auto-26><vspace|0.5fn>
 
-    <with|par-left|1tab|4.1<space|2spc>Applications
+    <with|par-left|1tab|4.1<space|2spc>Plus compliqué
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-33>>
-
-    <with|par-left|1tab|4.2<space|2spc>Plus compliqué
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-34>>
-
-    <with|par-left|4tab|Exercice <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-35><vspace|0.15fn>>
+    <no-break><pageref|auto-27>>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|5<space|2spc>Les
     boucles et vecteurs> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-36><vspace|0.5fn>
+    <no-break><pageref|auto-28><vspace|0.5fn>
 
     <with|par-left|1tab|5.1<space|2spc>Boucle
     <with|mode|prog|prog-language|python|font-family|rm|for>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-37>>
-
-    <with|par-left|4tab|Application <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-38><vspace|0.15fn>>
+    <no-break><pageref|auto-29>>
 
     <with|par-left|1tab|5.2<space|2spc>Boucle
     <with|mode|prog|prog-language|python|font-family|rm|if>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-39>>
-
-    <with|par-left|4tab|Application <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-40><vspace|0.15fn>>
+    <no-break><pageref|auto-30>>
 
     <with|par-left|1tab|5.3<space|2spc>Boucle
     <with|mode|prog|prog-language|python|font-family|rm|while>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-41>>
-
-    <with|par-left|4tab|Application <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-42><vspace|0.15fn>>
+    <no-break><pageref|auto-31>>
 
     <with|par-left|1tab|5.4<space|2spc>Vecteurs
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-43>>
+    <no-break><pageref|auto-32>>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|6<space|2spc>Un
     peu d'analyse statistique> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-44><vspace|0.5fn>
+    <no-break><pageref|auto-33><vspace|0.5fn>
 
     <with|par-left|1tab|6.1<space|2spc>Organiser ses données
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-45>>
+    <no-break><pageref|auto-34>>
 
-    <with|par-left|1tab|6.2<space|2spc>Statistique
+    <with|par-left|1tab|6.2<space|2spc>Quelques fonctions statistiques
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-46>>
+    <no-break><pageref|auto-35>>
   </table-of-contents>
 
-  <new-page*><section|Découverte de Python>
+  <new-page*><hrule>
+
+  <with|font-base-size|17|<\padded-center>
+    <strong|Les bases de la programmation sous Python>
+  </padded-center>>
+
+  <hrule>
+
+  <section|Découverte de Python>
 
   Python est un language massivement utilisé pour toutes sortent
   d'applications, pour lequel une aide en ligne est facilement trouvable. Il
@@ -205,7 +195,7 @@
     est interprété.
 
     <item>C'est un language de très haut niveau, c'est à dire que son
-    expression est au plus proche de la langue écrite (américaine,
+    expression est au plus proche de la langue écrite (états-unienne,
     évidemment)
 
     <item>C'est un language libre, c'est à dire que vous pouvez l'installer
@@ -215,7 +205,7 @@
     <item>C'est un language très utilisé, très actif, qui permet
     littéralement de faire le café,<\footnote>
       voir par exemple <slink|https://fr1.ipp-online.org/10-major-uses-of-python-5136>,
-      ou ce sondage sur l'usage des langages
+      ou ce sondage sur l'usage des languages
       <slink|https://insights.stackoverflow.com/survey/2018/#most-loved-dreaded-and-wanted>
     </footnote> avec une communauté très développée qui permet d'obtenir de
     l'aide facilement.<\footnote>
@@ -231,25 +221,40 @@
     d'OS.
 
     <item>Inconvénient, c'est un language très évolutif, qui rend les mises à
-    jours très fréquentes, voir casse les compatibilités.
+    jours très fréquentes, ce qui implique une veille importante pour gérer
+    les (in)compatibilités entre versions..
   </enumerate>
 
   <subsection|Lancer Python>
 
-  Utiliser Python c'est utiliser deux outils. Le premièr est l'éditeur de
+  Utiliser Python c'est utiliser deux outils. Le premier est l'éditeur de
   texte dans lequel vous allez écrire vos programmes. Le second est le prompt
   qui vous permet de les exécuter. Si vous disposez de votre ordinateur, vous
-  pouvez télécharger par exemple <hlink|anaconda|https://www.anaconda.com/products/distribution>,
-  puis suivre les indications. Si vous utilisez les ordinateurs mis à
-  disposition, vous devez\ 
+  pouvez télécharger par exemple la suite
+  <hlink|anaconda|https://www.anaconda.com/products/distribution> qui
+  contient tout ce dont vous aurez besoin dans ce cours. Pour l'installation,
+  suivre les indications. Si vous utilisez les ordinateurs mis à disposition,
+  vous devez\ 
 
   <\enumerate>
-    <item>?????
+    <item>En local.\ 
 
-    <item>
+    <\enumerate>
+      <item>Ouvrir un terminal
+
+      <item>Ouvrir un éditeur de texte. Par exemple gedit.
+
+      <item>Pour executer des commandes, vous pouvez les copier/coller dans
+      le prompt, ou pour exécuter <hlink|fichier.py|https://www.anaconda.com/products/distribution>
+      écrire dans le prompt <hlink|run fichier.py|https://www.anaconda.com/products/distribution>
+    </enumerate>
+
+    <item>Sur le serveur JupyterHub
+
+    <\enumerate>
+      <item>Ouvrir JupyterHub et insérer vos identifiants.
+    </enumerate>
   </enumerate>
-
-  \ 
 
   <subsection|Accéder aux données>
 
@@ -291,17 +296,22 @@
   </python-code>
 
   <\framed>
-    <paragraph|Exercice>
+    <paragraph*|Exercice>
 
     <\enumerate>
-      <item>Comprendre ligne à ligne ce que fait ce programme
+      <item>Comprendre ligne à ligne ce que fait ce programme. Vous pouvez
+      pour cela ajouter un <python|?> après n'importe quelle commande pour
+      obtenir l'aide associée. Exemple <python|print?>
 
-      <item>L'executer, c'est à dire cliquer sur le bouton d'execution ou
-      taper <python|run> puis le nom du fichier.
+      <item>Copier / Coller directement dans le prompt
+
+      <item>L'executer, c'est à dire l'enregistrer dans un fichier et cliquer
+      sur le bouton d'execution ou taper <python|run> puis le nom du fichier
+      dans le prompt.
 
       <item>Que s'est il passé ?
 
-      <item>le modifier et le rééxecuter, jusqu'à ce qu'il ne s'execute plus
+      <item>Le modifier et le rééxecuter, jusqu'à ce qu'il ne s'execute plus
       et comprendre pourquoi.
     </enumerate>
   </framed>
@@ -366,12 +376,14 @@
 
   Quelques connaissances indispensables :
 
-  <paragraph|Rêgles d'écriture>Tous les caractères sont autorisés. Certains
-  mots sont reservés, comme <python|for>, <python|print>, <python|def>,
-  <python|import><text-dots> Il est possible de commenter des morceaux du
-  code, ou d'ajouter des précisions pour le lecteur humain, qui ne doivent
-  pas être pris en compte par l'interpreteur. Dans ce cas on précède le
-  contenu de <python|#>:
+  <subsubsection|Rêgles d'écriture>
+
+  Tous les caractères sont autorisés. Certains mots sont reservés, comme
+  <python|for>, <python|print>, <python|def>, <python|import><text-dots> Ces
+  mots serton reconnus par votre éditeur de texte qui les affichera en
+  couleur. Il est possible de commenter des morceaux du code, ou d'ajouter
+  des précisions pour le lecteur humain, qui ne doivent pas être pris en
+  compte par l'interpreteur. Dans ce cas on précède le contenu de <python|#>:
 
   <\python-code>
     # commentaires non interprétés sur la ligne
@@ -395,7 +407,7 @@
     <paragraph|Exercice>Écrire le code permettant de calculer:
 
     <\enumerate>
-      <item>Le carré de la variable <python|Zorba_le_grec> avec les valeurs
+      <item>Le cube de la variable <python|Zorba_le_grec> avec les valeurs
       <python|Zorba_le_grec=0>, 10 et -10
 
       <item>Afficher le résultat sur le prompt
@@ -404,10 +416,10 @@
     </enumerate>
   </framed>
 
-  <paragraph|String (chaine de caractères)>
+  <subsubsection|String (chaine de caractères)>
 
   Les strings sont des objets très utile pour les manipulations de fichier ou
-  d'entete de fichier. Python dispose d'outils utile pour leur manipulation:
+  d'entete de fichier. Python dispose d'outils utiles pour leur manipulation:
 
   <\python-code>
     # création d'un string\ 
@@ -432,21 +444,22 @@
 
       <item>Afficher le résultat sur le prompt
 
-      <item>Afficher les caractères entre 15 et 20. Attention, Python
-      commence à 0<text-dots>
+      <item>Afficher les caractères entre 15 et 20. Attention, la première
+      entrée d'un tableau est 0.
     </enumerate>
   </framed>
 
-  <paragraph|Interaction avec les listes>Il existe dans python différents
-  types de tableau. Les listes permettent d'associer n'importe quel type
-  d'entrée et de jouer avec:
+  <subsubsection|Interaction avec les listes>
+
+  Il existe dans python différents types de tableau. Les listes permettent
+  d'associer n'importe quel type d'entrée et de jouer avec:
 
   <\python-code>
     # création d'une liste
 
     # a**2 signifie a puissance 2
 
-    abc = [ a , a , a**2 ]
+    abc = [ a , -a , a**2 ]
 
     \;
 
@@ -495,14 +508,15 @@
     </enumerate>
   </framed>
 
-  <paragraph|Librairies>Accéder aux fonctions non implémentés dans le Python
-  de base. Il en existe une très grand nombre dédiés à des applications aussi
-  diverses que la communication avec des capteurs, l'analyse fine de données
-  particulières ou la représentation graphique. Tant que la bibliothèque n'a
-  pas été chargée, il n'est pas possible d'utiliser les commandes qui s'y
-  trouve. On appelle la bibliothèque avec la commande <python|import> sous un
-  nom spécifique comme <python|np> pour <python|numpy> (ce n'est pas
-  obligatoire).
+  <subsubsection|Librairies>
+
+  Accéder aux fonctions non implémentés dans le Python de base. Il en existe
+  un très grand nombre dédiés à des applications aussi diverses que la
+  communication avec des capteurs, l'analyse fine de données particulières ou
+  la représentation graphique. Tant que la bibliothèque n'a pas été chargée,
+  il n'est pas possible d'utiliser les commandes qui s'y trouve. On appelle
+  la bibliothèque avec la commande <python|import> sous un nom spécifique
+  comme <python|np> pour <python|numpy> (ce n'est pas obligatoire).
 
   <\python-code>
     # faire un vecteur composé de dix "1" successifs grace à la bibliothèque
@@ -549,7 +563,13 @@
 
       <item>Calculer <math|y> la racine carrée de ce vecteur
 
-      <item>Afficher les termes de 10 à 20
+      <item>Créer la variable <math|z> contenant les termes de 10 à 20
+
+      <\enumerate>
+        <item>Calculer <math|z/2>
+
+        <item>Calculer <math|z//2>
+      </enumerate>
 
       <item>Importer la librairie <python|matplolib.pyplot>
 
@@ -557,12 +577,15 @@
     </enumerate>
   </framed>
 
-  <paragraph|Extraire une fraction d'un tableau, liste vecteur>Quel que soit
-  la forme de votre objet, vous pouvez le parcour en utilisant les outils
-  suivants:
+  <subsubsection|Extraire une fraction d'un tableau, d'une liste ou d'un
+  vecteur>
+
+  Quelle que soit la forme de votre variable, une liste composée d'objets de
+  nature quelconque ou d'un vecteur composée de grandeurs numériques, vous
+  pouvez le parcourir en utilisant les outils suivants:
 
   <\python-code>
-    # création d'une vecteur
+    # création d'un vecteur
 
     vec = np.arange(0,20,1)
 
@@ -580,7 +603,7 @@
 
     \;
 
-    # Afficher à partir jusqu'à l'avant dernière valeure\ 
+    # Afficher jusqu'à l'avant dernière valeure\ 
 
     print(vec[:-1])
 
@@ -589,6 +612,12 @@
     # Afficher une valeure sur deux\ 
 
     print(vec[::2])
+
+    \;
+
+    # Afficher de la fin au début\ 
+
+    print(vec[::-1])
 
     \;
 
@@ -596,39 +625,13 @@
 
     vecvec = np.array(vec,vec)
 
-    # création d'une vecteur
-
-    vec = np.arange(0,20,1)
-
     \;
 
-    # Afficher le vecteur
-
-    print(vec)
-
-    \;
-
-    # Afficher à partir de la seconde valeure\ 
-
-    print(vec[1:])
-
-    \;
-
-    # Afficher à partir jusqu'à l'avant dernière valeure\ 
-
-    print(vec[:-1])
-
-    \;
-
-    # Afficher une valeure sur deux\ 
-
-    print(vec[::2])
-
-    \;
-
-    # à deux dimensions on sépare les axes avec une virgule:
+    # avec plusieurs dimensions on sépare les axes avec une virgule:
 
     vecvec = np.([vec,vec])
+
+    print(vecvec)
 
     print(vecvec[ : , ::2 ])
   </python-code>
@@ -647,32 +650,72 @@
       <item>Afficher\ 
 
       <\enumerate>
-        <item>les 3 premiers termes de la deuxième ligne\ 
+        <item>Les 3 premiers termes de la deuxième ligne\ 
 
-        <item>la troisième colonne un terme sur deux
+        <item>La troisième colonne un terme sur deux
       </enumerate>
     </enumerate>
   </framed>
 
-  <paragraph|Fonctions personnalisées>Il est possible d'executer une partie
-  du programme dans un sous programme. Cela permet d'alléger la lecture et de
-  s'assurer que le code est rigoureusement le même malgré les différents
-  appels:
+  <subsubsection|Débugage>
+
+  Débugger consiste à comparer ce que le programme devrait faire et ce que le
+  programme fait réellement. Cela se fait en deux étapes,\ 
+
+  <\enumerate>
+    <item>Il faut que le programme puisse s'executer sans erreur
+
+    <item>Qu'il fasse ce que vous pensez qu'il doit faire.
+  </enumerate>
+
+  Exemple avec un programme de calcul de perimetre d'un quadrilatère:
 
   <\python-code>
-    # la fonction est définie avec def
+    height = int(input("Height: "))
 
-    # et porte le nom lineaire
+    width = int(input("Width: "))
+
+    print("perimeter =", wdth + height + width + width )
+  </python-code>
+
+  <\framed>
+    <paragraph|Exercice>Executer ce programme. Il ne s'exécute pas. Pour
+    trouver pourquoi, il faut comprendre ce que fait chaque ligne en
+    commençant par la ligne où se situe l'erreur. Vous avez deux indices, les
+    sorties du programme, et le message d'erreur.\ 
+
+    Une fois corrigée, le programme s'execute. Pour vérifier qu'il est
+    correcte, appliquez le sur des cas où vous connaissez la réponse. Que
+    concluez vous ? Pour le corriger il faut lire ligne à ligne le programme
+    et comprendre d'où vient le problème. Il faut pouvoir répondre à la
+    double question <with|font-series|bold|Que fait cette ligne ? Est ce bien
+    ce qu'elle est supposée faire ?>\ 
+  </framed>
+
+  <subsection|Fonctions personnalisées>
+
+  Il est possible d'executer une partie du programme dans un sous programme.
+  Cela permet d'alléger la lecture et de s'assurer que le code est
+  rigoureusement lors de différents appels:
+
+  <\python-code>
+    # la fonction est définie avec le mot def
+
+    # on lui donne le nom lineaire
 
     def lineaire( a ):
+
+    \ \ \ \ # généralement la structure et l'utilité
+
+    \ \ \ \ # de la fonction sont ajoutées ici
 
     \ \ \ \ return a*10
 
     \;
 
-    # et celle ci loi de puissance
+    # une autre fonction loi de puissance
 
-    # on notera que le parametre beta doit être donné en entré
+    # on notera que le parametre beta doit être donné en entrée
 
     def puissance( a , beta ):
 
@@ -693,57 +736,43 @@
     <paragraph|Exercice>
 
     <\enumerate>
-      <item>Copier et exécuter une des fonctions proposées ci-dessus
+      <item>Copier et exécuter une des fonctions proposée ci-dessus
 
       <item>Modifier le nom de la fonction et recommencer
+
+      <item>Créer une fonction qui affiche les caractères 11 à 25 d'un
+      vecteur\ 
     </enumerate>
   </framed>
 
-  <paragraph|Débugage>Débugger consiste à comparer ce que le programme
-  devrait faire et ce que le programme fait réellement. Cela se fait en deux
-  étapes,\ 
+  \;
 
-  <\enumerate>
-    <item>il faut que le programme puisse s'executer sans erreur
+  \;
 
-    <item>qu'il fasse ce que vous pensez qu'il doit faire.
-  </enumerate>
+  \;
 
-  Exemple avec un programme de calcul de perimetre d'un quadrilatère:
+  <new-page*><hrule>
 
-  <\python-code>
-    height = int(input("Height: "))
+  <with|font-base-size|17|<\padded-center>
+    <strong|Les bases de la programmation sous Python>
+  </padded-center>>
 
-    width = int(input("Width: "))
+  <hrule>
 
-    print("perimeter =", wdth + height + width + width )
-  </python-code>
+  <section|Importer et Exporter un fichier>
 
-  <\framed>
-    <paragraph|Exercice>Executer ce programme. Il ne tourne pas. Pour trouver
-    pourquoi, il faut comprendre ce que fait chaque ligne en commençant par
-    la ligne où se situe l'erreur. Vous avez deux indices, les sorties du
-    programme, et le message d'erreur.\ 
-
-    Une fois corrigée, le programme s'execute. Pour vérifier qu'il est
-    correcte, appliquez le sur des cas où vous connaissez la réponse. Que
-    concluez vous ? Pour le corriger il faut lire ligne à ligne le programme
-    et comprendre d'où vient le problème. Il faut pouvoir répondre à la
-    double question <with|font-series|bold|Que fait cette ligne ? Est ce bien
-    ce qu'elle est supposée faire ?>\ 
-  </framed>
-
-  <new-page*><section|Exporter / Importer un fichier>
-
-  <subsection|Avec <python|numpy>>
+  <subsection|Avec la librairie <python|numpy>>
 
   La plupart du temps vous cherchez à accéder à des données pour en faire une
   représentation ou un traitement. Les méthodes d'accès vous seront donc
   fondamentales. Il existe un grand nombre de méthodes permettant d'accéder à
   des données. Par exemple dans la librairie <python|numpy> vous pouvez
-  charger ou enregistrer des tableaux de chiffres à l'aide de
-  <python|np.loadtxt> et <python|np.savetxt>. Mais attention ces fichiers ne
-  peuvent contenir que des valeurs numériques.
+  charger des tableaux de chiffres à l'aide de
+  <python|np.loadtxt>.<\footnote>
+    Rappel, vous pouvez pour obtenir de l'aide ajouter un <python|?> après
+    n'importe quelle commande. Exemple <python|print?>
+  </footnote> Vous pouvez également les enregistrer avec <python|np.savetxt>.
+  Mais attention ces fichiers ne peuvent contenir que des valeurs numériques.
 
   <\python-code>
     # on définit le programme que l'on veut importer et son chemin d'accès
@@ -796,13 +825,28 @@
       <with|font-shape|italic|nouveau> que vous aurez créé.
 
       <item>Ouvrir le fichier <with|font-shape|italic|test_2.txt> dans un
-      éditeur de texte. Compter le nombre de ligne du header (entête),
-      identifier le délimiteur, et enfin le charger, sans le header, en
-      donnant <python|f2> comme nom de son contenu, puis l'afficher sur le
-      prompt.
+      éditeur de texte.\ 
 
-      <item>Multiplier la seconde ligne par 10, ajouter une colonne puis
-      réenregistrer le fichier.
+      <\enumerate>
+        <item>Compter le nombre de ligne du header (entête), identifier le
+        délimiteur, et enfin le charger, sans le header, en donnant
+        <python|f2> comme nom de son contenu, puis l'afficher sur le prompt.
+
+        <item>Multiplier la seconde ligne par 10, puis réenregistrer le
+        fichier avec un autre nom
+      </enumerate>
+
+      <item>Ouvrir le fichier <with|font-shape|italic|test_3.txt> dans un
+      éditeur de texte. Quelle est la différence avec
+      <with|font-shape|italic|test_2.txt> ? Essayez de l'ouvrir avec la
+      commande précédente. Pourquoi cela ne fonctionne-t-il pas ? Que
+      convient-il de faire ?\ 
+
+      <item>Ouvrir le fichier <with|font-shape|italic|test_4.txt> dans un
+      éditeur de texte. Quelle est la différence avec
+      <with|font-shape|italic|test_2.txt> ? Essayez de l'ouvrir avec la
+      commande précédente. Pourquoi cela ne fonctionne-t-il pas ? Que
+      convient-il de faire ?\ 
     </enumerate>
   </framed>
 
@@ -814,7 +858,7 @@
   allons travailler à l'aide la librairie <python|panda>, mais il en existe
   d'autres.\ 
 
-  <subsubsection|Fichiers csv>
+  <subsubsection|Fichier csv simple>
 
   Extrait de l'aide de la librairie <python|csv>:\ 
 
@@ -859,11 +903,57 @@
     simple.
   </framed>
 
+  <subsubsection|Fichiers csv complexe>
+
+  Il existe souvent des trous dans les fichiers de données. Pour les gérer il
+  convient de leur attribuer une valeur qui permet de les évacuer avant
+  d'effectuer une étude. Généralement on insère le string NaN (not a number)
+  pour cela.
+
+  Comme on l'a vu, <python|np.loadtxt> ne permet pas de charger des fichiers
+  contenant des valeurs vides. Nous allons utiliser la fonction <python|csv>
+  de la librairie <python|pandas> dont l'usage est le suivant:
+
+  <\python-code>
+    f_name = \ # path to file + file name
+
+    c_name = \ # nome de la colonne d'intéret
+
+    import pandas as pd
+
+    df = pd.read_excel(f_name)
+
+    print(df.head(5)) \ # print first 5 rows of the dataframe
+
+    print(df)
+
+    print(df[cname])
+  </python-code>
+
+  <\framed>
+    <paragraph|Exercice>Nous allons travailler dans ce cas avec un fichier
+    provenant d'un site internet officiel. Pour commencer, rendez vous sur le
+    site <slink|https://ourworldindata.org/>. Télécharger un fichier csv
+    quelconque\Vvous avez également un fichier disponible dans
+    <shell|seance_2/decarbonized_energy.csv>.
+
+    <\enumerate>
+      <item>Quel est le format des données que vous avez télechargé ?
+
+      <item>Ouvrez le avec un tableur, que voyez vous, comment allez vous
+      pouvoir exploiter ces données ?
+
+      <item>Importez le sous python. Attention aux caractères accentuées qui
+      peuvent poser problème. Dans ce cas les supprimer par une recherche
+      automatique.
+    </enumerate>
+  </framed>
+
   <subsubsection|Fichiers Excel>
 
   Il existe un grand nombre de librairie qui permettent d'importer des
   fichiers Excel, de manière plus ou moins sophistiquée. Nous nous appuyons
-  ici sur la fonction <python|pd.read_excel> de la librairie <python|panda>,
+  ici sur la fonction <python|pd.read_excel> de la librairie <python|pandas>,
   dont l'usage est le suivant:
 
   <\python-code>
@@ -1622,75 +1712,56 @@
 <\initial>
   <\collection>
     <associate|page-medium|paper>
+    <associate|preamble|false>
   </collection>
 </initial>
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|3>>
-    <associate|auto-10|<tuple|3|5>>
-    <associate|auto-11|<tuple|4|5>>
-    <associate|auto-12|<tuple|5|5>>
-    <associate|auto-13|<tuple|6|6>>
-    <associate|auto-14|<tuple|7|6>>
-    <associate|auto-15|<tuple|8|6>>
-    <associate|auto-16|<tuple|9|7>>
-    <associate|auto-17|<tuple|10|7>>
-    <associate|auto-18|<tuple|11|7>>
-    <associate|auto-19|<tuple|12|8>>
-    <associate|auto-2|<tuple|1.1|3>>
-    <associate|auto-20|<tuple|13|8>>
-    <associate|auto-21|<tuple|14|8>>
-    <associate|auto-22|<tuple|2|9>>
-    <associate|auto-23|<tuple|2.1|9>>
-    <associate|auto-24|<tuple|1|9>>
-    <associate|auto-25|<tuple|2.2|9>>
-    <associate|auto-26|<tuple|2.2.1|9>>
-    <associate|auto-27|<tuple|2.2.1.1|10>>
-    <associate|auto-28|<tuple|2.2.2|10>>
-    <associate|auto-29|<tuple|2.2.2.1|10>>
-    <associate|auto-3|<tuple|1.2|3>>
-    <associate|auto-30|<tuple|2.2.2.2|10>>
-    <associate|auto-31|<tuple|3|11>>
-    <associate|auto-32|<tuple|3.1|11>>
-    <associate|auto-33|<tuple|3.1.0.1|11>>
-    <associate|auto-34|<tuple|3.2|11>>
-    <associate|auto-35|<tuple|3.2.1|11>>
-    <associate|auto-36|<tuple|3.2.1.1|11>>
-    <associate|auto-37|<tuple|3.2.2|11>>
-    <associate|auto-38|<tuple|3.2.2.1|12>>
-    <associate|auto-39|<tuple|3.2.3|12>>
+    <associate|auto-1|<tuple|1|2>>
+    <associate|auto-10|<tuple|1.5.4|5>>
+    <associate|auto-11|<tuple|1.5.5|6>>
+    <associate|auto-12|<tuple|1.5.6|7>>
+    <associate|auto-13|<tuple|1.6|7>>
+    <associate|auto-14|<tuple|2|9>>
+    <associate|auto-15|<tuple|2.1|9>>
+    <associate|auto-16|<tuple|2.2|10>>
+    <associate|auto-17|<tuple|2.2.1|10>>
+    <associate|auto-18|<tuple|2.2.2|10>>
+    <associate|auto-19|<tuple|2.2.3|12>>
+    <associate|auto-2|<tuple|1.1|2>>
+    <associate|auto-20|<tuple|3|12>>
+    <associate|auto-21|<tuple|3.1|12>>
+    <associate|auto-22|<tuple|3.2|12>>
+    <associate|auto-23|<tuple|3.2.1|12>>
+    <associate|auto-24|<tuple|3.2.2|13>>
+    <associate|auto-25|<tuple|3.2.3|13>>
+    <associate|auto-26|<tuple|3.2.4|14>>
+    <associate|auto-27|<tuple|4|14>>
+    <associate|auto-28|<tuple|4.1|16>>
+    <associate|auto-29|<tuple|5|16>>
+    <associate|auto-3|<tuple|1.2|2>>
+    <associate|auto-30|<tuple|5.1|17>>
+    <associate|auto-31|<tuple|5.2|18>>
+    <associate|auto-32|<tuple|5.3|18>>
+    <associate|auto-33|<tuple|5.4|20>>
+    <associate|auto-34|<tuple|6|20>>
+    <associate|auto-35|<tuple|6.1|20>>
+    <associate|auto-36|<tuple|6.2|?>>
     <associate|auto-4|<tuple|1.3|3>>
-    <associate|auto-40|<tuple|3.2.3.1|12>>
-    <associate|auto-41|<tuple|3.2.4|12>>
-    <associate|auto-42|<tuple|3.2.4.1|12>>
-    <associate|auto-43|<tuple|4|13>>
-    <associate|auto-44|<tuple|4.0.0.1|13>>
-    <associate|auto-45|<tuple|4.1|13>>
-    <associate|auto-46|<tuple|4.1.0.1|14>>
-    <associate|auto-47|<tuple|5|15>>
-    <associate|auto-48|<tuple|5.1|15>>
-    <associate|auto-49|<tuple|5.1.0.1|16>>
-    <associate|auto-5|<tuple|1.4|4>>
-    <associate|auto-50|<tuple|5.2|16>>
-    <associate|auto-51|<tuple|5.2.0.1|17>>
-    <associate|auto-52|<tuple|5.3|17>>
-    <associate|auto-53|<tuple|5.3.0.1|17>>
-    <associate|auto-54|<tuple|5.4|17>>
-    <associate|auto-55|<tuple|5.4.0.1|18>>
-    <associate|auto-56|<tuple|6|19>>
-    <associate|auto-57|<tuple|6.1|19>>
-    <associate|auto-58|<tuple|6.2|19>>
-    <associate|auto-6|<tuple|1|4>>
-    <associate|auto-7|<tuple|1.5|4>>
-    <associate|auto-8|<tuple|1|5>>
-    <associate|auto-9|<tuple|2|5>>
-    <associate|footnote-1|<tuple|1|3>>
-    <associate|footnote-2|<tuple|2|3>>
-    <associate|footnote-3|<tuple|3|3>>
-    <associate|footnr-1|<tuple|1|3>>
-    <associate|footnr-2|<tuple|2|3>>
-    <associate|footnr-3|<tuple|3|3>>
+    <associate|auto-5|<tuple|1.4|3>>
+    <associate|auto-6|<tuple|1.5|4>>
+    <associate|auto-7|<tuple|1.5.1|4>>
+    <associate|auto-8|<tuple|1.5.2|4>>
+    <associate|auto-9|<tuple|1.5.3|5>>
+    <associate|footnote-1|<tuple|1|2>>
+    <associate|footnote-2|<tuple|2|2>>
+    <associate|footnote-3|<tuple|3|2>>
+    <associate|footnote-4|<tuple|4|9>>
+    <associate|footnr-1|<tuple|1|2>>
+    <associate|footnr-2|<tuple|2|2>>
+    <associate|footnr-3|<tuple|3|2>>
+    <associate|footnr-4|<tuple|4|9>>
   </collection>
 </references>
 
@@ -1717,221 +1788,130 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>>
 
-      <with|par-left|<quote|4tab>|Exercice
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-6><vspace|0.15fn>>
-
       <with|par-left|<quote|1tab>|1.5<space|2spc>Quelques bases rapides
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-6>>
+
+      <with|par-left|<quote|2tab>|1.5.1<space|2spc>Rêgles d'écriture
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-7>>
 
-      <with|par-left|<quote|4tab>|Rêgles d'écriture
+      <with|par-left|<quote|2tab>|1.5.2<space|2spc>String (chaine de
+      caractères) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-8>>
+
+      <with|par-left|<quote|2tab>|1.5.3<space|2spc>Interaction avec les
+      listes <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-9>>
+
+      <with|par-left|<quote|2tab>|1.5.4<space|2spc>Librairies
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-8><vspace|0.15fn>>
+      <no-break><pageref|auto-10>>
 
-      <with|par-left|<quote|4tab>|Exercice
+      <with|par-left|<quote|2tab>|1.5.5<space|2spc>Extraire une fraction d'un
+      tableau, d'une liste ou d'un vecteur
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-9><vspace|0.15fn>>
+      <no-break><pageref|auto-11>>
 
-      <with|par-left|<quote|4tab>|String (chaine de caractères)
+      <with|par-left|<quote|2tab>|1.5.6<space|2spc>Débugage
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-10><vspace|0.15fn>>
+      <no-break><pageref|auto-12>>
 
-      <with|par-left|<quote|4tab>|Exercice
+      <with|par-left|<quote|1tab>|1.6<space|2spc>Fonctions personnalisées
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-11><vspace|0.15fn>>
+      <no-break><pageref|auto-13>>
 
-      <with|par-left|<quote|4tab>|Interaction avec les listes
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-12><vspace|0.15fn>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Importer
+      et Exporter un fichier> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-14><vspace|0.5fn>
 
-      <with|par-left|<quote|4tab>|Exercice
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-13><vspace|0.15fn>>
-
-      <with|par-left|<quote|4tab>|Librairies
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-14><vspace|0.15fn>>
-
-      <with|par-left|<quote|4tab>|Exercice
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-15><vspace|0.15fn>>
-
-      <with|par-left|<quote|4tab>|Extraire une fraction d'un tableau, liste
-      vecteur <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-16><vspace|0.15fn>>
-
-      <with|par-left|<quote|4tab>|Exercice
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-17><vspace|0.15fn>>
-
-      <with|par-left|<quote|4tab>|Fonctions personnalisées
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-18><vspace|0.15fn>>
-
-      <with|par-left|<quote|4tab>|Exercice
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-19><vspace|0.15fn>>
-
-      <with|par-left|<quote|4tab>|Débugage
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-20><vspace|0.15fn>>
-
-      <with|par-left|<quote|4tab>|Exercice
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-21><vspace|0.15fn>>
-
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Exporter
-      / Importer un fichier> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-22><vspace|0.5fn>
-
-      <with|par-left|<quote|1tab>|2.1<space|2spc>Avec
+      <with|par-left|<quote|1tab>|2.1<space|2spc>Avec la librairie
       <with|mode|<quote|prog>|prog-language|<quote|python>|font-family|<quote|rm>|numpy>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-23>>
-
-      <with|par-left|<quote|4tab>|Exercice
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-24><vspace|0.15fn>>
+      <no-break><pageref|auto-15>>
 
       <with|par-left|<quote|1tab>|2.2<space|2spc>Importer des données
       produites sous Excel <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-25>>
+      <no-break><pageref|auto-16>>
 
       <with|par-left|<quote|2tab>|2.2.1<space|2spc>Fichiers csv
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-26>>
-
-      <with|par-left|<quote|4tab>|Exercice
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-27><vspace|0.15fn>>
+      <no-break><pageref|auto-17>>
 
       <with|par-left|<quote|2tab>|2.2.2<space|2spc>Fichiers Excel
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-28>>
-
-      <with|par-left|<quote|4tab>|Exercice
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-29><vspace|0.15fn>>
-
-      <with|par-left|<quote|4tab>|Exercice
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-30><vspace|0.15fn>>
+      <no-break><pageref|auto-18>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Faire
       une figure> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-31><vspace|0.5fn>
+      <no-break><pageref|auto-19><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|3.1<space|2spc>Introduction
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-32>>
-
-      <with|par-left|<quote|4tab>|Exercice
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33><vspace|0.15fn>>
+      <no-break><pageref|auto-20>>
 
       <with|par-left|<quote|1tab>|3.2<space|2spc>Plus sophistiqué
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-34>>
+      <no-break><pageref|auto-21>>
 
       <with|par-left|<quote|2tab>|3.2.1<space|2spc>Plot multiples
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-35>>
-
-      <with|par-left|<quote|4tab>|Exercice
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-36><vspace|0.15fn>>
+      <no-break><pageref|auto-22>>
 
       <with|par-left|<quote|2tab>|3.2.2<space|2spc>Histogrammes
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-37>>
-
-      <with|par-left|<quote|4tab>|Exercice
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-38><vspace|0.15fn>>
+      <no-break><pageref|auto-23>>
 
       <with|par-left|<quote|2tab>|3.2.3<space|2spc>Matrices
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-39>>
-
-      <with|par-left|<quote|4tab>|Exercice
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-40><vspace|0.15fn>>
+      <no-break><pageref|auto-24>>
 
       <with|par-left|<quote|2tab>|3.2.4<space|2spc>Affichage / Enregistrement
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-41>>
-
-      <with|par-left|<quote|4tab>|Exercice
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-42><vspace|0.15fn>>
+      <no-break><pageref|auto-25>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Les
       fonctions> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-43><vspace|0.5fn>
-
-      <with|par-left|<quote|4tab>|Exercice
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-44><vspace|0.15fn>>
+      <no-break><pageref|auto-26><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|4.1<space|2spc>Plus compliqué
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-45>>
-
-      <with|par-left|<quote|4tab>|Exercice
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-46><vspace|0.15fn>>
+      <no-break><pageref|auto-27>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Les
       boucles et vecteurs> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-47><vspace|0.5fn>
+      <no-break><pageref|auto-28><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|5.1<space|2spc>Boucle
       <with|mode|<quote|prog>|prog-language|<quote|python>|font-family|<quote|rm>|for>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-48>>
-
-      <with|par-left|<quote|4tab>|Exercice
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-49><vspace|0.15fn>>
+      <no-break><pageref|auto-29>>
 
       <with|par-left|<quote|1tab>|5.2<space|2spc>Boucle
       <with|mode|<quote|prog>|prog-language|<quote|python>|font-family|<quote|rm>|if>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-50>>
-
-      <with|par-left|<quote|4tab>|Exercice
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-51><vspace|0.15fn>>
+      <no-break><pageref|auto-30>>
 
       <with|par-left|<quote|1tab>|5.3<space|2spc>Boucle
       <with|mode|<quote|prog>|prog-language|<quote|python>|font-family|<quote|rm>|while>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-52>>
-
-      <with|par-left|<quote|4tab>|Application
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-53><vspace|0.15fn>>
+      <no-break><pageref|auto-31>>
 
       <with|par-left|<quote|1tab>|5.4<space|2spc>Vecteurs
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-54>>
-
-      <with|par-left|<quote|4tab>|Exercice
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-55><vspace|0.15fn>>
+      <no-break><pageref|auto-32>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Un
       peu d'analyse statistique> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-56><vspace|0.5fn>
+      <no-break><pageref|auto-33><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|6.1<space|2spc>Organiser ses données
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-57>>
+      <no-break><pageref|auto-34>>
 
       <with|par-left|<quote|1tab>|6.2<space|2spc>Quelques fonctions
       statistiques <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-58>>
+      <no-break><pageref|auto-35>>
     </associate>
   </collection>
 </auxiliary>
