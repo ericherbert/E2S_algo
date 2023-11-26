@@ -1962,10 +1962,10 @@
   <\framed>
     <paragraph|Exercice>Vous trouverez sur github
     <slink|https://github.com/ericherbert/E2S_algo> dans la séance<nbsp>6, le
-    fichier de données <with|font-shape|italic|Esperance_De_Vie.ods> dans
-    lequel se trouve les espérances de vie à la naissance de tous les pays du
-    monde en 2010, pour les hommes et les femmes. Les données proviennent du
-    site <slink|https://ourworldindata.org/>.
+    fichier de données <with|font-shape|italic|life-expectancy-vs-gdp-per-capita.csv>
+    dans lequel se trouve les espérances de vie à la naissance, les PIB et
+    les populations de tous les pays du monde en fonction du temps. Les
+    données proviennent du site <slink|https://ourworldindata.org/>.
 
     <\enumerate>
       <item>Récupérer les données
@@ -1973,27 +1973,44 @@
       <\enumerate>
         <item>Récupérer ce fichier, l'ouvrir avec un tableur, le sauvegarder
         sous le format <with|font-shape|italic|.csv> qui vous permettra de
-        l'ouvrir sous python. Quelle sont les espérances de vie en Chine ? au
-        Zimbabwe ? Leur population ?\ 
+        l'ouvrir sous python. Quelle sont les espérances de vie en Chine en
+        2010 ? au Zimbabwe en 1957? Leur population ? Leur PIB ?\ 
 
-        <item>L'ouvrir sous python avec la commande <python|np.loadtxt>, dans
-        la variable <python|data> en faisant attention dans les options au
-        délimiteur, aux colonnes et lignes à importer.
+        <item>L'ouvrir sous python avec la commande <python|pd.read_csv>,
+        dans la variable <python|data>. On accède au noms des colonnes
+        contenues <python|data> dans avec <python|list(data)>.
 
-        <item>Vérifications. Quelle est la taille de <python|data> ? Afficher
-        les dix premières lignes dans le terminal.
+        <item>Vérifications. Quelle est la taille de <python|data> ? On
+        accède à la colonne <python|Entity> de <python|data> avec
+        <python|data.Entity>. Afficher les différentes colonnes dans le
+        terminal.
       </enumerate>
 
       <item>Afficher les données
 
       <\enumerate>
         <item>En vous appuyant sur <python|plt.hist>, afficher les
-        distributions des espérances de vie et des populations. Enregistrer
-        les figures.
+        distributions des espérances de vie en 2010 et des populations puis
+        enregistrer les figures. On pourra construire les données avec une
+        commande de type :\ 
+
+        <\python-code>
+          out_GDP = <python|>data.GDP_per_capita[ (data.Year==2010) &
+          (pd.notna(data.Code)) & (pd.notna(data.GDP_per_capita))]
+
+          \;
+
+          out_life = <python|>data.Period_life_expectancy_at_birth[
+          (data.Year==2010) & (pd.notna(data.Code)) &
+          (pd.notna(data.Period_life_expectancy_at_birth))]
+        </python-code>
+
+        Qui combine trois conditions, la première sur l'année, la seconde
+        exclut les continents, la troisième exclut les GDP manquant.
 
         <item>Donner les étendues, les écart types et les moyennes de chacune
-        des distributions. Les sorties sont elles compatible avec ce que vous
-        savez ?
+        des distributions <python|out_GDP> et <python|out_life>. Les sorties
+        sont elles compatible avec ce que vous savez ?
 
         <item>Est ce que les moyennes calculées à la question précédente
         correspondent à la moyenne mondiale ? Pourquoi ?
@@ -2005,10 +2022,10 @@
         <item>Calculer la population totale <python|tot_pop>. Vérifier la
         valeur.
 
-        <item> Caculer l'espérance de vie pour les femmes avec l'expression\ 
+        <item> Caculer l'espérance de vie avec l'expression\ 
 
         <python|np.sum(Ef*pop)/tot_pot>, avec <python|Ef> l'espérance de vie
-        des femmes dans un pays et <python|pop> la population de ce pays.
+        dans un pays et <python|pop> la population de ce pays.
       </enumerate>
     </enumerate>
   </framed>
