@@ -1,4 +1,4 @@
-<TeXmacs|2.1.2>
+<TeXmacs|2.1>
 
 <style|<tuple|course|french>>
 
@@ -301,6 +301,8 @@
     <item>Sur le serveur JupyterHub
 
     <\enumerate>
+      <item>Le serveur est accessible <slink|<slink|https://jupy.physique.u-<slink|>paris.fr/><hlink||https://jupy.physique.u-<slink|>paris.fr/>>
+
       <item>Ouvrir JupyterHub et insérer vos identifiants.
     </enumerate>
   </enumerate>
@@ -1973,12 +1975,15 @@
       <\enumerate>
         <item>Récupérer ce fichier, l'ouvrir avec un tableur, le sauvegarder
         sous le format <with|font-shape|italic|.csv> qui vous permettra de
-        l'ouvrir sous python. Quelle sont les espérances de vie en Chine en
+        l'ouvrir sous python. Quelles sont les espérances de vie en Chine en
         2010 ? au Zimbabwe en 1957? Leur population ? Leur PIB ?\ 
 
         <item>L'ouvrir sous python avec la commande <python|pd.read_csv>,
-        dans la variable <python|data>. On accède au noms des colonnes
-        contenues <python|data> dans avec <python|list(data)>.
+        dans la variable <python|data>.\ 
+
+        La librairie <python|pandas> doit préalablemenent être importée. Il
+        est commode d'accèder aux noms des colonnes (entête ou header)
+        contenues <python|data> dans avec la commande <python|list(data)>.
 
         <item>Vérifications. Quelle est la taille de <python|data> ? On
         accède à la colonne <python|Entity> de <python|data> avec

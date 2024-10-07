@@ -28,7 +28,7 @@
   <slink|https://ourworldindata.org/>.
 
   <\enumerate>
-    <item>Récupérer les données
+    <item>Récupérer les données (<math|\<approx\>3><nbsp>pts)
 
     <\enumerate>
       <item>Récupérer ce fichier, l'ouvrir avec un tableur.
@@ -52,7 +52,7 @@
       terminal. Est ce que cela correspond ?\ 
     </enumerate>
 
-    <item>Afficher les données
+    <item>Afficher les données (<math|\<approx\>4><nbsp>pts)
 
     <\enumerate>
       <item>En vous appuyant sur <python|plt.plot>, de la librairie
@@ -65,12 +65,12 @@
       elle est atteinte. \ Recommencer avec le minimum.
     </enumerate>
 
-    <item>Traitement des données.
+    <item>Traitement des données (<math|\<approx\>4><nbsp>pts)
 
     <\enumerate>
       <item>Calculer la somme de toutes les émissions produites. Convertir
       cette masse en livre Romaine (<with|font-shape|italic|Libra>), qui vaut
-      0.327<nbsp>g.
+      327<nbsp>g.
 
       <item>Calculer la moyenne <math|\<mu\>> et l'écart types
       <math|\<sigma\>> de la série. Normaliser la série des émissions par la
