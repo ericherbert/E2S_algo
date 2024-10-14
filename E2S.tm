@@ -1,4 +1,4 @@
-<TeXmacs|2.1>
+<TeXmacs|2.1.2>
 
 <style|<tuple|course|french>>
 
@@ -1588,6 +1588,9 @@
   </framed>
 
   <new-page*><section|Les fonctions>
+
+  Cette partie est associée à la feuille Jupyter <shell|TP-[Fonctions].ipynb>
+  disponible sur github.
 
   Quand une tache est répétée dans un programme et que seules les valeurs
   numériques changent, il est alors intéressant de créer sa propre fonction,
