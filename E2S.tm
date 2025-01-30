@@ -1,4 +1,4 @@
-<TeXmacs|2.1.2>
+<TeXmacs|2.1>
 
 <style|<tuple|course|french>>
 
@@ -209,6 +209,24 @@
   </table-of-contents>
 
   <new-page*><section|Découverte de Python>
+
+  Lorsque l'on travaille sur des données, plusieurs problèmes questions se
+  posent
+
+  <\itemize>
+    <item>Pour quoi faire ? La base est bien sur une problématique.
+
+    <item>Sur quelles données ? Trouver les données est un problème en soi.
+    Un moteur de recherche est utile pour explorer la littérauture, mais les
+    données sont à récupérer sur des sites fiables. La création de
+    collections d'observables est la plupart du temps une tache délicate. On
+    ne construit ses données que lorqu'on en a la raison : fiabilité,
+    disponibilité.
+
+    <item>Comment faire ? C'est là qu'intervient l'automatisation pour
+    l'extraction d'informations. On n'oubliera pas de vérifier que le travail
+    n'a pas déjà été partiellement fait ailleurs.\ 
+  </itemize>
 
   Python est un language massivement utilisé pour toutes sortent
   d'applications, pour lequel une aide en ligne est facilement trouvable. Il
@@ -2078,7 +2096,7 @@
     <associate|auto-32|<tuple|4.3|17>>
     <associate|auto-33|<tuple|4.4|17>>
     <associate|auto-34|<tuple|5|19>>
-    <associate|auto-35|<tuple|5.1|19>>
+    <associate|auto-35|<tuple|5.1|20>>
     <associate|auto-36|<tuple|6|21>>
     <associate|auto-37|<tuple|6.1|21>>
     <associate|auto-38|<tuple|6.2|21>>
