@@ -1,4 +1,4 @@
-<TeXmacs|2.1>
+<TeXmacs|2.1.2>
 
 <style|<tuple|course|french>>
 
@@ -90,87 +90,87 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-15>>
 
-    <vspace*|1fn><with|font-series|bold|math-font-series|bold|2<space|2spc>Importer
-    et Exporter un fichier> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|2<space|2spc>Faire
+    une figure> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-16><vspace|0.5fn>
 
-    <with|par-left|1tab|2.1<space|2spc>Avec la librairie
-    <with|mode|prog|prog-language|python|font-family|rm|numpy>
+    <with|par-left|1tab|2.1<space|2spc>Introduction
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-17>>
 
-    <with|par-left|1tab|2.2<space|2spc>Importer des données produites sous
-    Excel <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|2.2<space|2spc>Plus sophistiqué
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-18>>
 
-    <with|par-left|2tab|2.2.1<space|2spc>Fichier csv simple
+    <with|par-left|2tab|2.2.1<space|2spc>Plot multiples
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-19>>
 
-    <with|par-left|2tab|2.2.2<space|2spc>Fichier csv complexe
+    <with|par-left|2tab|2.2.2<space|2spc>Histogrammes
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-20>>
 
-    <with|par-left|2tab|2.2.3<space|2spc>Fichier Excel
+    <with|par-left|2tab|2.2.3<space|2spc>Matrices
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-21>>
 
-    <vspace*|1fn><with|font-series|bold|math-font-series|bold|3<space|2spc>Faire
-    une figure> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-22><vspace|0.5fn>
-
-    <with|par-left|1tab|3.1<space|2spc>Introduction
+    <with|par-left|2tab|2.2.4<space|2spc>Affichage / Enregistrement
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-23>>
+    <no-break><pageref|auto-22>>
 
-    <with|par-left|1tab|3.2<space|2spc>Plus sophistiqué
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|3<space|2spc>Importer
+    et Exporter un fichier> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-23><vspace|0.5fn>
+
+    <with|par-left|1tab|3.1<space|2spc>Avec la librairie
+    <with|mode|prog|prog-language|python|font-family|rm|numpy>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-24>>
 
-    <with|par-left|2tab|3.2.1<space|2spc>Plot multiples
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|3.2<space|2spc>Importer des données produites sous
+    Excel <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-25>>
 
-    <with|par-left|2tab|3.2.2<space|2spc>Histogrammes
+    <with|par-left|2tab|3.2.1<space|2spc>Fichier csv simple
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-26>>
 
-    <with|par-left|2tab|3.2.3<space|2spc>Matrices
+    <with|par-left|2tab|3.2.2<space|2spc>Fichier csv complexe
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-27>>
 
-    <with|par-left|2tab|3.2.4<space|2spc>Affichage / Enregistrement
+    <with|par-left|2tab|3.2.3<space|2spc>Fichier Excel
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-28>>
 
     <vspace*|1fn><with|font-series|bold|math-font-series|bold|4<space|2spc>Les
-    fonctions> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    boucles et vecteurs> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-29><vspace|0.5fn>
 
-    <with|par-left|1tab|4.1<space|2spc>Plus compliqué
+    <with|par-left|1tab|4.1<space|2spc>Boucle
+    <with|mode|prog|prog-language|python|font-family|rm|for>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-30>>
 
-    <vspace*|1fn><with|font-series|bold|math-font-series|bold|5<space|2spc>Les
-    boucles et vecteurs> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-31><vspace|0.5fn>
+    <with|par-left|1tab|4.2<space|2spc>Boucle
+    <with|mode|prog|prog-language|python|font-family|rm|if>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-31>>
 
-    <with|par-left|1tab|5.1<space|2spc>Boucle
-    <with|mode|prog|prog-language|python|font-family|rm|for>
+    <with|par-left|1tab|4.3<space|2spc>Boucle
+    <with|mode|prog|prog-language|python|font-family|rm|while>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-32>>
 
-    <with|par-left|1tab|5.2<space|2spc>Boucle
-    <with|mode|prog|prog-language|python|font-family|rm|if>
+    <with|par-left|1tab|4.4<space|2spc>Vecteurs
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-33>>
 
-    <with|par-left|1tab|5.3<space|2spc>Boucle
-    <with|mode|prog|prog-language|python|font-family|rm|while>
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-34>>
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|5<space|2spc>Les
+    fonctions> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-34><vspace|0.5fn>
 
-    <with|par-left|1tab|5.4<space|2spc>Vecteurs
+    <with|par-left|1tab|5.1<space|2spc>Plus compliqué
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-35>>
 
@@ -1589,6 +1589,9 @@
 
   <new-page*><section|Les fonctions>
 
+  Cette section s'appuie sur le notebook jupyter
+  <shell|./seance_fonctions/TP-[fonctions].ipynb>.
+
   Quand une tache est répétée dans un programme et que seules les valeurs
   numériques changent, il est alors intéressant de créer sa propre fonction,
   que l'on appelle comme une fonction issue d'une librairie. Exemple de
@@ -2075,7 +2078,7 @@
     <associate|auto-32|<tuple|4.3|17>>
     <associate|auto-33|<tuple|4.4|17>>
     <associate|auto-34|<tuple|5|19>>
-    <associate|auto-35|<tuple|5.1|19>>
+    <associate|auto-35|<tuple|5.1|20>>
     <associate|auto-36|<tuple|6|21>>
     <associate|auto-37|<tuple|6.1|21>>
     <associate|auto-38|<tuple|6.2|21>>
