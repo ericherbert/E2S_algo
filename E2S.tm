@@ -1,4 +1,4 @@
-<TeXmacs|2.1.2>
+<TeXmacs|2.1.4>
 
 <style|<tuple|course|french>>
 
@@ -54,7 +54,7 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-6>>
 
-    <with|par-left|1tab|1.6<space|2spc>Mon tout premier programme
+    <with|par-left|1tab|1.6<space|2spc>Premier programme
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-7>>
 
@@ -301,7 +301,7 @@
     <item>Sur le serveur JupyterHub
 
     <\enumerate>
-      <item>Le serveur est accessible <slink|<slink|https://jupy.physique.u-<slink|>paris.fr/><hlink||https://jupy.physique.u-<slink|>paris.fr/>>
+      <item>Le serveur est accessible <slink|<slink|https://jupy2.physique.u-<slink|>paris.fr/><hlink||https://jupy.physique.u-<slink|>paris.fr/>>
 
       <item>Ouvrir JupyterHub et insérer vos identifiants.
     </enumerate>
@@ -346,11 +346,13 @@
     <with|font-shape|italic|download>
   </enumerate>
 
-  <subsection|Mon tout premier programme>
+  <subsection|Premier programme>
 
   Dans les exemples qui suivent, il ne s'agit pas de savoit écrire les
   programmes proposés mais d'avoir une première vision de la manière dont la
-  formulation doit être faite
+  formulation doit être faite.
+
+  \;
 
   Ouvrir <with|font-shape|italic|premier_programme.py> dans spyder ou dans un
   éditeur de texte.
@@ -450,7 +452,7 @@
 
   Quelques connaissances indispensables :
 
-  <subsubsection|Rêgles d'écriture>
+  <subsubsection|Règles d'écriture>
 
   Tous les caractères sont autorisés. Certains mots sont reservés, comme
   <python|for>, <python|print>, <python|def>, <python|import><text-dots> Ces
@@ -795,7 +797,7 @@
 
     \;
 
-    # on l''appelle ailleurs n'importe où dans le code
+    # on l appelle ailleurs n importe où dans le code
 
     a = 5
 
@@ -2045,6 +2047,7 @@
   <\collection>
     <associate|page-medium|paper>
     <associate|preamble|false>
+    <associate|prog-scripts|python>
   </collection>
 </initial>
 
@@ -2083,7 +2086,7 @@
     <associate|auto-37|<tuple|6.1|21>>
     <associate|auto-38|<tuple|6.2|21>>
     <associate|auto-39|<tuple|6.3|22>>
-    <associate|auto-4|<tuple|1.3|4>>
+    <associate|auto-4|<tuple|1.3|3>>
     <associate|auto-40|<tuple|6.3.1|22>>
     <associate|auto-41|<tuple|6.3.2|22>>
     <associate|auto-42|<tuple|6.4|23>>
@@ -2131,7 +2134,7 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>>
 
-      <with|par-left|<quote|1tab>|1.6<space|2spc>Mon tout premier programme
+      <with|par-left|<quote|1tab>|1.6<space|2spc>Premier programme
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-7>>
 
@@ -2139,7 +2142,7 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>>
 
-      <with|par-left|<quote|2tab>|1.7.1<space|2spc>Rêgles d'écriture
+      <with|par-left|<quote|2tab>|1.7.1<space|2spc>Règles d'écriture
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9>>
 
